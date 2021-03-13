@@ -154,6 +154,5 @@
 	default_pixel_x = -16
 	dogborg = TRUE
 	wideborg = TRUE
-	verbs |= /mob/living/silicon/robot/proc/ex_reserve_refill
-	verbs |= /mob/living/silicon/robot/proc/rest_style
+	verbs = /mob/living/silicon/robot/proc/rest_style
 	..()
