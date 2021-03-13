@@ -240,15 +240,13 @@
 	if(custom_sprite == TRUE)
 		return
 	if(wideborg == TRUE)
-		if(icontype== "Drake") // Why, Why can't we have normal nice things
-			icon = 'icons/mob/drakeborg/drakeborg_vr.dmi'
 		else
 			icon = wideborg_dept
 		return
-	if((!(original_icon == icon)) && (!(icon == 'icons/mob/robots_vr.dmi')))
+	if((!(original_icon == icon)) && (!(icon == 'icons/mob/robots.dmi')))
 		original_icon = icon
 	if((icon_state in vr_icons) && (icon == 'icons/mob/robots.dmi'))
-		icon = 'icons/mob/robots_vr.dmi'
+		icon = 'icons/mob/robots.dmi'
 	else if(!(icon_state in vr_icons))
 		icon = original_icon
 
