@@ -147,12 +147,6 @@
 	can_be_pushed = 0
 
 	icon 		 = 'icons/mob/robots_wide.dmi'
-	wideborg_dept  = 'icons/mob/robots_wide.dmi'
-	hands.icon = 'icons/mob/screen1_robot.dmi'
 	pixel_x 	 = -16
-	old_x 	 = -16
-	default_pixel_x = -16
-	dogborg = TRUE
-	wideborg = TRUE
-	verbs = /mob/living/silicon/robot/proc/rest_style
+	verbs = /mob/living/silicon/robot/proc/rest_style()
 	..()
