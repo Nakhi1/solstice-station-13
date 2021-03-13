@@ -97,6 +97,16 @@
 	var/intenselight = 0	// Whether cyborg's integrated light was upgraded
 	var/vtec = FALSE
 
+//Dogborg Vars
+	var/dogborg = FALSE //Dogborg special features (overlays etc.)
+	var/wideborg = FALSE //When the borg simply doesn't use standard 32p size.
+	var/scrubbing = FALSE //Floor cleaning enabled
+	var/datum/matter_synth/water_res = null
+	var/notransform
+	var/original_icon = 'icons/mob/robots.dmi'
+	var/sitting = FALSE
+	var/bellyup = FALSE
+
 	var/list/robot_verbs_default = list(
 		/mob/living/silicon/robot/proc/sensor_mode,
 		/mob/living/silicon/robot/proc/robot_checklaws
@@ -156,6 +166,91 @@
 	hud_list[SPECIALROLE_HUD] = new /image/hud_overlay('icons/mob/hud.dmi', src, "hudblank")
 
 	AddMovementHandler(/datum/movement_handler/robot/use_power, /datum/movement_handler/mob/space)
+
+/mob/living/silicon/robot/proc/rest_style()
+	set name = "Switch Rest Style"
+	set category = "IC"
+	set desc = "Select your resting pose."
+	sitting = FALSE
+	bellyup = FALSE
+	var/choice = alert(src, "Select resting pose", "", "Resting", "Sitting", "Belly up")
+	switch(choice)
+		if("Resting")
+			return 0
+		if("Sitting")
+			sitting = TRUE
+		if("Belly up")
+			bellyup = TRUE
+
+/mob/living/silicon/robot/updateicon()
+	sprite_check()
+	..()
+	if(dogborg == TRUE && stat == CONSCIOUS)
+		if(istype(module_active,/obj/item/weapon/gun/energy/laser/mounted))
+			add_overlay("laser")
+		if(istype(module_active,/obj/item/weapon/gun/energy/taser/mounted/cyborg))
+			add_overlay("taser")
+		if(lights_on)
+			add_overlay("eyes-[module_sprites[icontype]]-lights")
+		if(resting)
+			cut_overlays() // Hide that gut for it has no ground sprite yo.
+			if(sitting)
+				icon_state = "[module_sprites[icontype]]-sit"
+			if(bellyup)
+				icon_state = "[module_sprites[icontype]]-bellyup"
+			else if(!sitting && !bellyup)
+				icon_state = "[module_sprites[icontype]]-rest"
+		else
+			icon_state = "[module_sprites[icontype]]"
+	if(dogborg == TRUE && stat == DEAD)
+		icon_state = "[module_sprites[icontype]]-wreck"
+		add_overlay("wreck-overlay")
+
+/mob/living/silicon/robot/Moved(atom/old_loc, direction, forced = FALSE)
+	. = ..()
+	if(scrubbing && isturf(loc) && water_res?.energy >= 1)
+		var/turf/tile = loc
+		water_res.use_charge(1)
+		tile.clean_blood()
+		if(istype(tile, /turf/simulated))
+			var/turf/simulated/T = tile
+			T.dirt = 0
+		for(var/A in tile)
+			if(istype(A,/obj/effect/rune) || istype(A,/obj/effect/decal/cleanable) || istype(A,/obj/effect/overlay))
+				qdel(A)
+			else if(istype(A, /mob/living/carbon/human))
+				var/mob/living/carbon/human/cleaned_human = A
+				if(cleaned_human.lying)
+					if(cleaned_human.head)
+						cleaned_human.head.clean_blood()
+						cleaned_human.update_inv_head(0)
+					if(cleaned_human.wear_suit)
+						cleaned_human.wear_suit.clean_blood()
+						cleaned_human.update_inv_wear_suit(0)
+					else if(cleaned_human.w_uniform)
+						cleaned_human.w_uniform.clean_blood()
+						cleaned_human.update_inv_w_uniform(0)
+					if(cleaned_human.shoes)
+						cleaned_human.shoes.clean_blood()
+						cleaned_human.update_inv_shoes(0)
+					cleaned_human.clean_blood(1)
+					to_chat(cleaned_human, "<span class='warning'>[src] cleans your face!</span>")
+
+/mob/living/silicon/robot/proc/vr_sprite_check()
+	if(custom_sprite == TRUE)
+		return
+	if(wideborg == TRUE)
+		if(icontype== "Drake") // Why, Why can't we have normal nice things
+			icon = 'icons/mob/drakeborg/drakeborg_vr.dmi'
+		else
+			icon = wideborg_dept
+		return
+	if((!(original_icon == icon)) && (!(icon == 'icons/mob/robots_vr.dmi')))
+		original_icon = icon
+	if((icon_state in vr_icons) && (icon == 'icons/mob/robots.dmi'))
+		icon = 'icons/mob/robots_vr.dmi'
+	else if(!(icon_state in vr_icons))
+		icon = original_icon
 
 /mob/living/silicon/robot/proc/recalculate_synth_capacities()
 	if(!module || !module.synths)
