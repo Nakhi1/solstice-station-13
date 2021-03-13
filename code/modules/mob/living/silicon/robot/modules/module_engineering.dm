@@ -120,3 +120,40 @@
 	var/obj/item/device/lightreplacer/LR = locate() in equipment
 	LR.Charge(R, amount)
 	..()
+	
+//Dogborg
+
+/obj/item/weapon/robot_module/engiedog
+	name = "Construction Hound module"
+	sprites = list(
+					"Pupdozer" = "pupdozer",
+					"V2 Engidog" = "thottbot",
+					"EngiHound" = "engihound",
+					"EngiHoundDark" = "engihounddark",
+					)
+	channels = list(
+		"Engineering" = 1
+	)
+	networks = list(
+		NETWORK_ENGINEERING
+	)
+	subsystems = list(
+		/datum/nano_module/power_monitor,
+		/datum/nano_module/supermatter_monitor
+	)
+	supported_upgrades = list(
+		/obj/item/borg/upgrade/rcd
+	)
+	can_be_pushed = 0
+
+	R.icon 		 = 'icons/mob/widerobot_eng_vr.dmi'
+	R.wideborg_dept  = 'icons/mob/widerobot_eng_vr.dmi'
+	R.hands.icon = 'icons/mob/screen1_robot_vr.dmi'
+	R.pixel_x 	 = -16
+	R.old_x 	 = -16
+	R.default_pixel_x = -16
+	R.dogborg = TRUE
+	R.wideborg = TRUE
+	R.verbs |= /mob/living/silicon/robot/proc/ex_reserve_refill
+	R.verbs |= /mob/living/silicon/robot/proc/rest_style
+	..()
