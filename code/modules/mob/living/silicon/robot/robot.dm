@@ -182,7 +182,7 @@
 		if("Belly up")
 			bellyup = TRUE
 
-/mob/living/silicon/robot/updateicon()
+/mob/living/silicon/robot/update_icon()
 	..()
 	if(dogborg == TRUE && stat == CONSCIOUS)
 		if(istype(module_active,/obj/item/weapon/gun/energy/laser/mounted))
