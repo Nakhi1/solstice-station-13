@@ -127,7 +127,7 @@
 	name = "engineering hound module"
 	icon = 'icons/mob/robots_wide.dmi'
 	pixel_x = -16
-	verbs |= /mob/living/silicon/robot/proc/rest_style
+	verbs += /mob/living/silicon/robot/proc/rest_style
 	can_be_pushed = 0
 	sprites = list(
 					"Pupdozer" = "pupdozer",
