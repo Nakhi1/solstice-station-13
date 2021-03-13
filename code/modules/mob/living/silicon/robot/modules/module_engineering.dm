@@ -125,11 +125,11 @@
 
 /obj/item/weapon/robot_module/engineering/hound
 	name = "engineering hound module"
-	icon = 'icons/mob/robots_wide.dmi'
 	pixel_x = -16
 	can_be_pushed = 0
 	display_name = "Engineering - Hound"
-	
+
+	R.icon = 'icons/mob/robots_wide.dmi'
 	sprites = list(
 		"Pupdozer" = "pupdozer",
 		"Engidog V2" = "thottbot",
