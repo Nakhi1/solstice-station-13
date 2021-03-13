@@ -186,13 +186,13 @@
 	..()
 	if(dogborg == TRUE && stat == CONSCIOUS)
 		if(istype(module_active,/obj/item/weapon/gun/energy/laser/mounted))
-			overlay += "laser"
+			overlays += "laser"
 		if(istype(module_active,/obj/item/weapon/gun/energy/taser/mounted/cyborg))
-			overlay += "taser"
+			overlays += "taser"
 		if(lights_on)
-			overlay += "eyes-[module_sprites[icontype]]-lights"
+			overlays += "eyes-[module_sprites[icontype]]-lights"
 		if(resting)
-			overlay -= ""
+			overlays.Cut()
 			if(sitting)
 				icon_state = "[module_sprites[icontype]]-sit"
 			if(bellyup)
@@ -203,7 +203,7 @@
 			icon_state = "[module_sprites[icontype]]"
 	if(dogborg == TRUE && stat == DEAD)
 		icon_state = "[module_sprites[icontype]]-wreck"
-		overlay += "wreck-overlay"
+		overlays += "wreck-overlay"
 
 /mob/living/silicon/robot/proc/recalculate_synth_capacities()
 	if(!module || !module.synths)
