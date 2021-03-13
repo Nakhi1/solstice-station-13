@@ -128,6 +128,7 @@
 	icon = 'icons/mob/robots_wide.dmi'
 	pixel_x = -16
 	can_be_pushed = 0
+	display_name = "Engineering - Hound"
 	sprites = list(
 					"Pupdozer" = "pupdozer",
 					"Engidog V2" = "thottbot",
