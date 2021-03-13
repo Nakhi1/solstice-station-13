@@ -146,14 +146,14 @@
 	)
 	can_be_pushed = 0
 
-	R.icon 		 = 'icons/mob/widerobot_eng_vr.dmi'
-	R.wideborg_dept  = 'icons/mob/widerobot_eng_vr.dmi'
-	R.hands.icon = 'icons/mob/screen1_robot_vr.dmi'
-	R.pixel_x 	 = -16
-	R.old_x 	 = -16
-	R.default_pixel_x = -16
-	R.dogborg = TRUE
-	R.wideborg = TRUE
-	R.verbs |= /mob/living/silicon/robot/proc/ex_reserve_refill
-	R.verbs |= /mob/living/silicon/robot/proc/rest_style
+	icon 		 = 'icons/mob/robots_wide.dmi'
+	wideborg_dept  = 'icons/mob/robots_wide.dmi'
+	hands.icon = 'icons/mob/screen1_robot.dmi'
+	pixel_x 	 = -16
+	old_x 	 = -16
+	default_pixel_x = -16
+	dogborg = TRUE
+	wideborg = TRUE
+	verbs |= /mob/living/silicon/robot/proc/ex_reserve_refill
+	verbs |= /mob/living/silicon/robot/proc/rest_style
 	..()
