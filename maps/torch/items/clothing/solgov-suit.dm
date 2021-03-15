@@ -359,6 +359,10 @@
 	item_icons = list(slot_wear_suit_str = 'maps/torch/icons/mob/onmob_suit_solgov.dmi')
 	sprite_sheets = list(
 		SPECIES_UNATHI = 'maps/torch/icons/mob/unathi/onmob_suit_solgov_unathi.dmi',
+		SPECIES_SERGAL = 'maps/torch/icons/mob/sergal/onmob_suit_solgov_sergal.dmi',
+		SPECIES_VULP = 'maps/torch/icons/mob/vulpkanin/onmob_suit_solgov_vulp.dmi',
+		SPECIES_AKULA = 'maps/torch/icons/mob/akula/onmob_suit_solgov_akula.dmi',
+		SPECIES_TAJ = 'maps/torch/icons/mob/tajara/onmob_suit_solgov_tajara.dmi',
 		SPECIES_SKRELL = 'maps/torch/icons/mob/skrell/onmob_suit_solgov_skrell.dmi',
 		)
 	sprite_sheets_obj = list(
@@ -375,7 +379,11 @@
 	item_icons = list(slot_wear_suit_str = 'maps/torch/icons/mob/onmob_suit_solgov.dmi')
 	sprite_sheets = list(
 		SPECIES_UNATHI = 'maps/torch/icons/mob/unathi/onmob_suit_solgov_unathi.dmi',
-		SPECIES_SKRELL = 'maps/torch/icons/mob/skrell/onmob_suit_solgov_skrell.dmi',
+		SPECIES_SERGAL = 'maps/torch/icons/mob/sergal/onmob_suit_solgov_sergal.dmi',
+		SPECIES_VULP = 'maps/torch/icons/mob/vulpkanin/onmob_suit_solgov_vulp.dmi',
+		SPECIES_AKULA = 'maps/torch/icons/mob/akula/onmob_suit_solgov_akula.dmi',
+		SPECIES_TAJ = 'maps/torch/icons/mob/tajara/onmob_suit_solgov_tajara.dmi',
+		SPECIES_SKRELL = 'maps/torch/icons/mob/skrell/onmob_suit_solgov_skrell.dmi'
 		)
 	sprite_sheets_obj = list(
 		SPECIES_UNATHI = 'maps/torch/icons/obj/unathi/obj_suit_solgov_unathi.dmi',
@@ -391,7 +399,11 @@
 	item_icons = list(slot_wear_suit_str = 'maps/torch/icons/mob/onmob_suit_solgov.dmi')
 	sprite_sheets = list(
 		SPECIES_UNATHI = 'maps/torch/icons/mob/unathi/onmob_suit_solgov_unathi.dmi',
-		SPECIES_SKRELL = 'maps/torch/icons/mob/skrell/onmob_suit_solgov_skrell.dmi',
+		SPECIES_SERGAL = 'maps/torch/icons/mob/sergal/onmob_suit_solgov_sergal.dmi',
+		SPECIES_VULP = 'maps/torch/icons/mob/vulpkanin/onmob_suit_solgov_vulp.dmi',
+		SPECIES_AKULA = 'maps/torch/icons/mob/akula/onmob_suit_solgov_akula.dmi',
+		SPECIES_TAJ = 'maps/torch/icons/mob/tajara/onmob_suit_solgov_tajara.dmi',
+		SPECIES_SKRELL = 'maps/torch/icons/mob/skrell/onmob_suit_solgov_skrell.dmi'
 		)
 	sprite_sheets_obj = list(
 		SPECIES_UNATHI = 'maps/torch/icons/obj/unathi/obj_suit_solgov_unathi.dmi',
@@ -407,7 +419,11 @@
 	item_icons = list(slot_wear_suit_str = 'maps/torch/icons/mob/onmob_suit_solgov.dmi')
 	sprite_sheets = list(
 		SPECIES_UNATHI = 'maps/torch/icons/mob/unathi/onmob_suit_solgov_unathi.dmi',
-		SPECIES_SKRELL = 'maps/torch/icons/mob/skrell/onmob_suit_solgov_skrell.dmi',
+		SPECIES_SERGAL = 'maps/torch/icons/mob/sergal/onmob_suit_solgov_sergal.dmi',
+		SPECIES_VULP = 'maps/torch/icons/mob/vulpkanin/onmob_suit_solgov_vulp.dmi',
+		SPECIES_AKULA = 'maps/torch/icons/mob/akula/onmob_suit_solgov_akula.dmi',
+		SPECIES_TAJ = 'maps/torch/icons/mob/tajara/onmob_suit_solgov_tajara.dmi',
+		SPECIES_SKRELL = 'maps/torch/icons/mob/skrell/onmob_suit_solgov_skrell.dmi'
 		)
 	sprite_sheets_obj = list(
 		SPECIES_UNATHI = 'maps/torch/icons/obj/unathi/obj_suit_solgov_unathi.dmi',
@@ -451,7 +467,12 @@
 	item_icons = list(slot_head_str = 'maps/torch/icons/mob/onmob_head_solgov.dmi')
 	icon_state = "helm_explorer"
 	sprite_sheets = list(
-		SPECIES_SKRELL = 'maps/torch/icons/mob/skrell/onmob_head_solgov_skrell.dmi'
+		SPECIES_SKRELL = 'maps/torch/icons/mob/skrell/onmob_head_solgov_skrell.dmi',
+		SPECIES_UNATHI = 'maps/torch/icons/mob/unathi/onmob_head_solgov_unathi.dmi',
+		SPECIES_SERGAL = 'maps/torch/icons/mob/sergal/onmob_heah_solgov_sergal.dmi',
+		SPECIES_VULP = 'maps/torch/icons/mob/vulpkanin/onmob_head_solgov_vulp.dmi',
+		SPECIES_AKULA = 'maps/torch/icons/mob/akula/onmob_head_solgov_akula.dmi',
+		SPECIES_TAJ = 'maps/torch/icons/mob/tajara/onmob_head_solgov_tajara.dmi'
 		)
 	sprite_sheets_obj = list()
 	armor = list(
@@ -473,7 +494,11 @@
 	desc = "The bulky Exoplanet Exploration Unit is a standard voidsuit for Expeditionary Corps field operations. It features extra padding and respectable radiation-resistant lining."
 	icon_state = "void_explorer"
 	sprite_sheets = list(
-		SPECIES_UNATHI = 'maps/torch/icons/mob/unathi/onmob_suit_solgov_unathi.dmi'
+		SPECIES_UNATHI = 'maps/torch/icons/mob/unathi/onmob_suit_solgov_unathi.dmi',
+		SPECIES_SERGAL = 'maps/torch/icons/mob/sergal/onmob_suit_solgov_sergal.dmi',
+		SPECIES_VULP = 'maps/torch/icons/mob/vulpkanin/onmob_suit_solgov_vulp.dmi',
+		SPECIES_AKULA = 'maps/torch/icons/mob/akula/onmob_suit_solgov_akula.dmi',
+		SPECIES_TAJ = 'maps/torch/icons/mob/tajara/onmob_suit_solgov_tajara.dmi'
 		)
 	sprite_sheets_obj = list()
 	armor = list(
