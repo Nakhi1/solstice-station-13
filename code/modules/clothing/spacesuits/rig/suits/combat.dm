@@ -27,26 +27,34 @@
 
 /obj/item/clothing/head/helmet/space/rig/combat
 	light_overlay = "helmet_light_dual_green"
-	species_restricted = list(SPECIES_HUMAN, SPECIES_SKRELL, SPECIES_UNATHI, SPECIES_IPC)
+	species_restricted = list(SPECIES_HUMAN, SPECIES_SKRELL, SPECIES_UNATHI, SPECIES_IPC, SPECIES_AKULA, SPECIES_TAJ, SPECIES_VULP, SPECIES_CUSTOM, SPECIES_SERGAL)
 	sprite_sheets = list(
-		SPECIES_UNATHI = 'icons/mob/species/unathi/generated/onmob_head_unathi.dmi'
+		SPECIES_UNATHI = 'icons/mob/species/unathi/generated/onmob_head_unathi.dmi',
+		SPECIES_AKULA = 'icons/mob/species/akula/onmob_head_helmet_akula.dmi',
+		SPECIES_VULP = 'icons/mob/species/vulpkanin/onmob_head_helmet_vulp.dmi',
+		SPECIES_TAJ = 'icons/mob/species/tajara/onmob_head_helmet_tajara.dmi',
+		SPECIES_SERGAL = 'icons/mob/species/sergal/onmob_head_helmet_sergal.dmi'
 		)
 
 /obj/item/clothing/suit/space/rig/combat
-	species_restricted = list(SPECIES_HUMAN,SPECIES_SKRELL, SPECIES_UNATHI, SPECIES_IPC)
+	species_restricted = list(SPECIES_HUMAN, SPECIES_SKRELL, SPECIES_UNATHI, SPECIES_IPC, SPECIES_AKULA, SPECIES_TAJ, SPECIES_VULP, SPECIES_CUSTOM, SPECIES_SERGAL)
 	sprite_sheets = list(
-		SPECIES_UNATHI = 'icons/mob/species/unathi/generated/onmob_suit_unathi.dmi'
+		SPECIES_UNATHI = 'icons/mob/species/unathi/generated/onmob_head_unathi.dmi',
+		SPECIES_AKULA = 'icons/mob/species/akula/onmob_suit_akula.dmi',
+		SPECIES_VULP = 'icons/mob/species/vulpkanin/onmob_suit_vulp.dmi',
+		SPECIES_TAJ = 'icons/mob/species/tajara/onmob_suit_tajara.dmi',
+		SPECIES_SERGAL = 'icons/mob/species/sergal/onmob_suit_sergal.dmi'
 		)
 
 /obj/item/clothing/shoes/magboots/rig/combat
-	species_restricted = list(SPECIES_HUMAN,SPECIES_SKRELL, SPECIES_UNATHI, SPECIES_IPC)
+	species_restricted = list(SPECIES_HUMAN, SPECIES_SKRELL, SPECIES_UNATHI, SPECIES_IPC, SPECIES_AKULA, SPECIES_TAJ, SPECIES_VULP, SPECIES_CUSTOM, SPECIES_SERGAL)
 	sprite_sheets = list(
 		SPECIES_UNATHI = 'icons/mob/species/unathi/generated/onmob_feet_unathi.dmi'
 		)
 
 /obj/item/clothing/gloves/rig/combat
 	item_flags = ITEM_FLAG_THICKMATERIAL | ITEM_FLAG_NOCUFFS
-	species_restricted = list(SPECIES_HUMAN,SPECIES_SKRELL, SPECIES_UNATHI, SPECIES_IPC)
+	species_restricted = list(SPECIES_HUMAN, SPECIES_SKRELL, SPECIES_UNATHI, SPECIES_IPC, SPECIES_AKULA, SPECIES_TAJ, SPECIES_VULP, SPECIES_CUSTOM, SPECIES_SERGAL)
 	sprite_sheets = list(
 		SPECIES_UNATHI = 'icons/mob/species/unathi/generated/onmob_hands_unathi.dmi'
 		)
@@ -94,26 +102,34 @@
 
 /obj/item/clothing/head/helmet/space/rig/military
 	light_overlay = "helmet_light_dual_green"
-	species_restricted = list(SPECIES_HUMAN)
+	species_restricted = list(SPECIES_HUMAN, SPECIES_SKRELL, SPECIES_UNATHI, SPECIES_IPC, SPECIES_AKULA, SPECIES_TAJ, SPECIES_VULP, SPECIES_CUSTOM, SPECIES_SERGAL)
 	sprite_sheets = list(
-		SPECIES_UNATHI = 'icons/mob/species/unathi/onmob_head_helmet_unathi.dmi'
+		SPECIES_UNATHI = 'icons/mob/species/unathi/generated/onmob_head_unathi.dmi',
+		SPECIES_AKULA = 'icons/mob/species/akula/onmob_head_helmet_akula.dmi',
+		SPECIES_VULP = 'icons/mob/species/vulpkanin/onmob_head_helmet_vulp.dmi',
+		SPECIES_TAJ = 'icons/mob/species/tajara/onmob_head_helmet_tajara.dmi',
+		SPECIES_SERGAL = 'icons/mob/species/sergal/onmob_head_helmet_sergal.dmi'
 		)
 
 /obj/item/clothing/suit/space/rig/military
-	species_restricted = list(SPECIES_HUMAN,SPECIES_SKRELL, SPECIES_UNATHI, SPECIES_IPC)
+	species_restricted = list(SPECIES_HUMAN, SPECIES_SKRELL, SPECIES_UNATHI, SPECIES_IPC, SPECIES_AKULA, SPECIES_TAJ, SPECIES_VULP, SPECIES_CUSTOM, SPECIES_SERGAL)
 	sprite_sheets = list(
-		SPECIES_UNATHI = 'icons/mob/species/unathi/generated/onmob_suit_unathi.dmi'
+		SPECIES_UNATHI = 'icons/mob/species/unathi/generated/onmob_head_unathi.dmi',
+		SPECIES_AKULA = 'icons/mob/species/akula/onmob_suit_akula.dmi',
+		SPECIES_VULP = 'icons/mob/species/vulpkanin/onmob_suit_vulp.dmi',
+		SPECIES_TAJ = 'icons/mob/species/tajara/onmob_suit_tajara.dmi',
+		SPECIES_SERGAL = 'icons/mob/species/sergal/onmob_suit_sergal.dmi'
 		)
 
 /obj/item/clothing/shoes/magboots/rig/military
-	species_restricted = list(SPECIES_HUMAN,SPECIES_SKRELL, SPECIES_UNATHI, SPECIES_IPC)
+	species_restricted = list(SPECIES_HUMAN, SPECIES_SKRELL, SPECIES_UNATHI, SPECIES_IPC, SPECIES_AKULA, SPECIES_TAJ, SPECIES_VULP, SPECIES_CUSTOM, SPECIES_SERGAL)
 	sprite_sheets = list(
 		SPECIES_UNATHI = 'icons/mob/species/unathi/generated/onmob_feet_unathi.dmi'
 		)
 
 /obj/item/clothing/gloves/rig/military
 	item_flags = ITEM_FLAG_THICKMATERIAL | ITEM_FLAG_NOCUFFS
-	species_restricted = list(SPECIES_HUMAN,SPECIES_SKRELL, SPECIES_UNATHI, SPECIES_IPC)
+	species_restricted = list(SPECIES_HUMAN, SPECIES_SKRELL, SPECIES_UNATHI, SPECIES_IPC, SPECIES_AKULA, SPECIES_TAJ, SPECIES_VULP, SPECIES_CUSTOM, SPECIES_SERGAL)
 	sprite_sheets = list(
 		SPECIES_UNATHI = 'icons/mob/species/unathi/generated/onmob_hands_unathi.dmi'
 		)
