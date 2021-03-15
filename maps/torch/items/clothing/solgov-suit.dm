@@ -469,7 +469,7 @@
 	sprite_sheets = list(
 		SPECIES_SKRELL = 'maps/torch/icons/mob/skrell/onmob_head_solgov_skrell.dmi',
 		SPECIES_UNATHI = 'maps/torch/icons/mob/unathi/onmob_head_solgov_unathi.dmi',
-		SPECIES_SERGAL = 'maps/torch/icons/mob/sergal/onmob_heah_solgov_sergal.dmi',
+		SPECIES_SERGAL = 'maps/torch/icons/mob/sergal/onmob_head_solgov_sergal.dmi',
 		SPECIES_VULP = 'maps/torch/icons/mob/vulpkanin/onmob_head_solgov_vulp.dmi',
 		SPECIES_AKULA = 'maps/torch/icons/mob/akula/onmob_head_solgov_akula.dmi',
 		SPECIES_TAJ = 'maps/torch/icons/mob/tajara/onmob_head_solgov_tajara.dmi'
